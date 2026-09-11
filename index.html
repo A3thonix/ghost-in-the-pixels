@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GHOST IN THE PIXELS // forensic workspace</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="topline"></div>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-mark">G</span><span><b>GHOST IN THE PIXELS</b><small>A3THONIX 2.0 // FORENSIC OPERATIONS</small></span></a>
+    <div class="session"><span class="live-dot"></span>SESSION ACTIVE <i></i> 01:47:22</div>
+    <div class="top-actions"><span class="difficulty">HARD <b>500 PTS</b></span><button id="contrastButton" aria-label="Toggle contrast">◐</button></div>
+  </header>
+
+  <main class="workspace">
+    <aside class="left-rail">
+      <div class="operator"><span class="operator-avatar">A</span><span><small>OPERATOR</small><b>A3thonix 2.0</b></span><em>●</em></div>
+      <nav>
+        <label>CHALLENGE</label>
+        <a class="current" href="#challenge"><span>01</span> Briefing</a>
+        <a href="#target"><span>02</span> Target</a>
+        <a href="#files"><span>03</span> Files</a>
+        <a href="#objectives"><span>04</span> Objectives</a>
+        <a href="#terminal"><span>05</span> Terminal</a>
+        <a href="#submit"><span>06</span> Submit flag</a>
+      </nav>
+      <section class="rail-progress">
+        <small>MISSION PROGRESS</small><strong id="progressLabel">0%</strong>
+        <div><i id="progressBar"></i></div>
+        <p>Complete the investigation<br>without modifying evidence.</p>
+      </section>
+          <div class="rail-footer"><span>VPN <b>CONNECTED</b></span><span>NODE <b>10.10.14.77</b></span><small>A3thonix 2.0 // GHOST OPS</small></div>
+    </aside>
+
+    <section class="main-column">
+      <section class="briefing" id="challenge">
+        <div class="kicker">CASE FILE / VF-07 / DIGITAL FORENSICS</div>
+        <div class="brief-grid">
+          <div><h1>GHOST <i>IN</i><br>THE PIXELS</h1><p>A compromised intelligence workstation recovered a single image from an abandoned Linux server. It looks ordinary. The analyst who extracted it left only one note:</p><blockquote>“The pixels remember what the filesystem forgot.”</blockquote></div>
+          <div class="case-meta"><span>DIFFICULTY<b>HARD / EXPERT</b></span><span>CATEGORY<b>STEGANOGRAPHY</b></span><span>EST. TIME<b>60–120 MIN</b></span></div>
+        </div>
+      </section>
+
+      <div class="tool-row">
+        <section class="panel target-card" id="target"><header><span class="panel-kicker">ATTACK MACHINE</span><span class="online"><i></i> ONLINE</span></header><div class="machine"><div class="kali-logo">◢</div><div><h2>KALI-GHOST</h2><p>10.10.14.77 · Kali Linux 2025.1</p></div></div><div class="machine-stats"><span>LATENCY <b>24ms</b></span><span>VPN <b>WIREGUARD</b></span><span>UPTIME <b>00:18:42</b></span></div><div class="machine-actions"><button id="resetButton">↻ RESET MACHINE</button><button id="downloadButton">↓ DOWNLOAD EVIDENCE</button></div></section>
+        <section class="panel files-card" id="files"><header><span class="panel-kicker">~/challenge</span><span class="file-count">3 FILES</span></header><div class="file-entry"><b>▧</b><span>ghost.png<small>4.2 MB · evidence</small></span><em>-rw-r--r--</em></div><div class="file-entry"><b>▤</b><span>readme.txt<small>236 B · text</small></span><em>-rw-r--r--</em></div><div class="file-entry"><b>▤</b><span>checksum.txt<small>91 B · sha256</small></span><em>-r--r--r--</em></div></section>
+      </div>
+
+      <section class="panel terminal-panel" id="terminal">
+        <header class="terminal-title"><span><i class="live-dot"></i><b>TERMINAL</b> <small>guest@kali: ~/challenge</small></span><span class="window-buttons">— □ ×</span></header>
+        <div class="terminal" id="terminalOutput">
+          <div class="boot">┌──(kali㉿ghost)-[~/challenge]</div>
+          <div class="boot">└─$ <span>_</span></div>
+          <div class="system">[+] Evidence workspace mounted read-only</div>
+          <div class="system">[+] 3 artifacts available · type <b>help</b> for commands</div>
+        </div>
+        <form class="terminal-input"><span>┌──(kali㉿ghost)-[<b id="cwd">~/challenge</b>]<br>└─$</span><input id="commandInput" autocomplete="off" spellcheck="false" autofocus aria-label="Kali terminal command"><button>RUN</button></form>
+        <div class="quick-commands"><button data-command="ls -la">ls -la</button><button data-command="exiftool ghost.png">exiftool ghost.png</button><button data-command="binwalk ghost.png">binwalk ghost.png</button><button data-command="zsteg ghost.png">zsteg ghost.png</button><button data-command="help">help</button></div>
+      </section>
+
+      <div class="bottom-grid">
+        <section class="panel objectives" id="objectives"><header><span class="panel-kicker">OBJECTIVES</span><span id="objectiveCount">0 / 7</span></header><ul><li data-objective="inspect">Investigate the recovered evidence</li><li data-objective="analyze">Analyze the image</li><li data-objective="identify">Identify hidden data</li><li data-objective="extract">Extract the concealed artifact</li><li data-objective="password">Recover the required password</li><li data-objective="decode">Decode the final payload</li><li data-objective="flag">Submit the flag</li></ul></section>
+        <section class="panel notes"><header><span class="panel-kicker">ANALYST NOTE</span><span>RECOVERED / 14:32 UTC</span></header><p>Acquisition status: <b>PARTIAL</b></p><p>Do not modify the original evidence. Verify the checksum before analysis.</p><p class="quote">“No obvious malware. No suspicious filenames.”</p><div class="hints"><button data-hint="Files can lie. Pixels are harder to convince.">HINT 01 <b>-10</b></button><button data-hint="Inspect what normal viewers choose not to show.">HINT 02 <b>-25</b></button><button data-hint="Look beyond the expected file structure.">HINT 03 <b>-50</b></button></div><p id="hintMessage" class="hint-message"></p></section>
+      </div>
+
+      <section class="submit panel" id="submit"><div><span class="panel-kicker">FLAG SUBMISSION</span><h2>Transmit recovered flag</h2><p>Format: <code>CTF{...}</code> · case sensitive</p></div><form id="flagForm"><input id="flagInput" placeholder="CTF{________________________}" autocomplete="off"><button>SUBMIT FLAG →</button></form><output id="formMessage"></output></section>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
